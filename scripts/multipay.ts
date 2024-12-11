@@ -16,7 +16,10 @@ async function main() {
   const currencyAddress = ethers.ZeroAddress;
   const amount = 0; //  paying in ETH, we don't need amount here
 
-  const asset = "ETH/USD";
+  // V---------Here
+  const asset = "ETH/USD"; // TEST replace with "NGL/USD" and it works
+
+
   // Fetch verification arguments from your oracle's proofs
   const { merkleRoot, merkleProof, signatures, price, timestamp, dataKey } =
     await fetchVerifyArgs(asset);
